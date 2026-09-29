@@ -2,6 +2,12 @@
 
 LearnCode is an educational platform designed to help people learn programming concepts in a clear and practical way.
 
+## Links
+
+- [Home](https://learncode-pearl.vercel.app/)
+- [Basics](https://learncode-pearl.vercel.app/basics)
+- [Sitemap](https://learncode-pearl.vercel.app/sitemap.xml)
+
 ## Core Principles
 
 LearnCode emphasizes:
