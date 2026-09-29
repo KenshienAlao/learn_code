@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap:
+Sitemap: https://learncode-pearl.vercel.app/sitemap.xml
 
