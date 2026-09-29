@@ -1,4 +1,220 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  background-color: #282c34;
-  color: white;
+  --bg-page: #ffffff;
+  --bg-surface: #f1f1f1;
+  --bg-surface-hover: #e7e9eb;
+  --bg-surface-active: #d5d8dc;
+  --header-bg: #282a35;
+
+  --border: #d4d4d4;
+  --border-subtle: #e7e9eb;
+
+  --text-primary: #282a35;
+  --text-body: #1f2227;
+  --text-secondary: #4b5563;
+  --text-muted: #4b5563;
+
+  --accent: #1a73e8;
+  --accent-hover: #155fc0;
+  --accent-subtle: #e3eefc;
+  --accent-fg: #ffffff;
+
+  --code-bg: #f1f1f1;
+  --code-header: #e7e9eb;
+  --code-border: #d4d4d4;
+  --code-text: #282a35;
+  --code-dim: #4b5563;
+  --code-keyword: #991b1b;
+  --code-string: #2d6b2d;
+  --code-number: #7a4a1a;
+  --code-builtin: #2a4a8a;
+
+  --success: #15803d;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --warning: #b45309;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+
+  --focus-ring: #1a73e8;
+
+  --font-scale: 1rem;
+  --font-line-height: 1.6;
+}
+
+.dark {
+  --bg-page: #282a35;
+  --bg-surface: #323545;
+  --bg-surface-hover: #3a3d4a;
+  --bg-surface-active: #454859;
+  --header-bg: #1d1f27;
+
+  --border: #454859;
+  --border-subtle: #3a3d4a;
+
+  --text-primary: #f1f1f1;
+  --text-body: #dcdfe4;
+  --text-secondary: #a8aebb;
+  --text-muted: #a8aebb;
+
+  --accent: #4da3ff;
+  --accent-hover: #7bbcff;
+  --accent-subtle: #1f3350;
+  --accent-fg: #06172e;
+
+  --code-bg: #1f212b;
+  --code-header: #191b23;
+  --code-border: #3a3d4a;
+  --code-text: #d5dae3;
+  --code-dim: #9ca3af;
+  --code-keyword: #e08a8a;
+  --code-string: #9fc98a;
+  --code-number: #d9a86c;
+  --code-builtin: #8fb3e8;
+
+  --success: #4ade80;
+  --success-bg: #052e16;
+  --success-border: #166534;
+  --warning: #fcd34d;
+  --warning-bg: #451a03;
+  --warning-border: #78350f;
+
+  --focus-ring: #4da3ff;
+}
+
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  --color-surface-active: var(--bg-surface-active);
+  --color-header: var(--header-bg);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-primary: var(--text-primary);
+  --color-body: var(--text-body);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-fg: var(--accent-fg);
+  --color-code-bg: var(--code-bg);
+  --color-code-header: var(--code-header);
+  --color-code-border: var(--code-border);
+  --color-code-text: var(--code-text);
+  --color-code-dim: var(--code-dim);
+  --color-code-keyword: var(--code-keyword);
+  --color-code-string: var(--code-string);
+  --color-code-number: var(--code-number);
+  --color-code-builtin: var(--code-builtin);
+}
+
+[data-font-size="large"] {
+  --font-scale: 1.125rem;
+  --font-line-height: 1.65;
+}
+
+[data-font-size="xlarge"] {
+  --font-scale: 1.25rem;
+  --font-line-height: 1.7;
+}
+
+html {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  font-size: var(--font-scale);
+  line-height: var(--font-line-height);
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 0.75rem 1.25rem;
+  z-index: 100;
+  font-weight: 600;
+  border-radius: 0;
+  text-decoration: none;
+  transition: top 0.15s ease-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+pre code {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  nav,
+  aside,
+  .no-print,
+  button,
+  .reading-progress {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #222222 !important;
+    background: #fafaf9 !important;
+  }
+
+  pre {
+    background-color: #f1f1ef !important;
+    color: #333333 !important;
+    border: 1px solid #e5e5e2 !important;
+  }
 }

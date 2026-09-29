@@ -1,0 +1,41 @@
+{
+  "name": "LearnCode",
+  "short_name": "LearnCode",
+  "description": "A fast, accessible, beginner-friendly programming learning reference with practical coding questions.",
+  "start_url": "/basics",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Basics",
+      "short_name": "Basics",
+      "description": "Start with programming basics",
+      "url": "/basics",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Search",
+      "short_name": "Search",
+      "description": "Search lessons and questions",
+      "url": "/?search=1",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
+}

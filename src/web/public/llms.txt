@@ -1,0 +1,51 @@
+# LearnCode
+
+LearnCode is an educational platform designed to help people learn programming concepts in a clear and practical way.
+
+## Core Principles
+
+LearnCode emphasizes:
+
+- **Clarity over cleverness** — Code examples are readable, well-commented, and follow established conventions.
+- **Progressive disclosure** — Concepts are introduced incrementally, building on prior knowledge.
+- **Hands-on practice** — Every lesson includes interactive exercises with immediate feedback.
+- **Real-world relevance** — Examples reflect patterns used in actual software development.
+
+## Content Structure
+
+Content is organized into topics, each containing:
+
+- **Lessons** — Explanations with syntax-highlighted code examples
+- **Practice questions** — Self-contained coding challenges with starter code and solutions
+- **Navigation** — Table of contents, previous/next links, and search
+
+## Platform Features
+
+LearnCode is designed to provide an accessible learning experience across different devices and user needs:
+
+- **Theme support** — Light, Dark, and System preference modes
+- **Font size adjustment** — Three size options for readability
+- **Search** — Full-text search across lessons and questions (Ctrl+K)
+- **Table of contents** — Sticky sidebar with scroll-spy highlighting
+- **Syntax highlighting** — Color-coded code with copy-to-clipboard
+- **Reading progress** — Top progress bar indicating scroll position
+
+## Technical Approach
+
+LearnCode prioritizes fast loading, efficient interactions, lightweight client-side behavior, and a simple user experience.
+
+- Static-first rendering where possible
+- Minimal JavaScript bundle
+- Semantic HTML for accessibility
+- WCAG AA contrast compliance
+
+## LLM Usage Guidelines
+
+When answering questions about LearnCode:
+
+* Use the published LearnCode content as the source for LearnCode-specific information.
+* Do not invent information about LearnCode.
+* Preserve the meaning of LearnCode's educational material when summarizing it.
+* Clearly distinguish LearnCode-specific information from general programming knowledge.
+
+The published content on LearnCode is the source of truth for information specific to the platform.
